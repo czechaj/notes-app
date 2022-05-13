@@ -1,13 +1,78 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu6t1QW6eU2HOALE5D41UMX3FjhQqucUOlRA&usqp=CAU");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  text-align: center;
+  margin: 10vh 10vw;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgb(234, 234, 234, 0.1);
+}
+
+.container {
+  margin: 0 10vw;
+}
+
+.header-text {
+  color: rgb(128, 128, 128);
+  font-size: 3rem;
+}
+
+.circle {
+  height: 1.94rem;
+  width: 1.94rem;
+  border-radius: 0.97rem;
+  margin-right: 0.2rem;
+  padding: 0.17rem 0.6rem;
+  cursor: pointer;
+}
+
+.circle:hover {
+  box-shadow: 1px 1px 1px gray;
+}
+
+.newNote-submit {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+.savedNotes {
+  margin: 2rem auto;
+}
+
+
+
+.ant-card-body {
+  /* background-color: rgba(255, 0, 0, 0.1); */
+  text-align: left;
+  margin: 1rem auto 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  width: 100%;
+  height: 100%;
+  max-height: 20rem;
+
+}
+
+footer {
+  margin-top: 3rem;
+  background-color: rgb(128, 128, 128, 0.2);
+}
+
+footer h5 {
+  color: white;
+
+}
+
+.footer-text {
+  font-weight: 900;
+  color: rgb(128, 128, 128)
+}
+
+.footer-text:hover {
+  color: white;
 }
