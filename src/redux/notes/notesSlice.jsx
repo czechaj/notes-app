@@ -3,24 +3,27 @@ import { createSlice } from "@reduxjs/toolkit";
 export const notesSlice = createSlice({
   name: "notes",
   initialState: {
-    items: [],
+    items: JSON.parse(localStorage.getItem("notes")) || [],
     filter: "",
   },
   reducers: {
     addNote: (state, action) => {
       state.items.push(action.payload);
+      localStorage.setItem("notes", JSON.stringify(state.items));
     },
     changeNote: (state, action) => {
       const changedNote = state.items.find(
         (note) => note.id === action.payload.id
       );
       changedNote.title = action.payload.title;
+      localStorage.setItem("notes", JSON.stringify(state.items));
     },
     dropNote: (state, action) => {
       const newNotes = state.items.filter(
         (note) => note.id !== action.payload.id
       );
       state.items = newNotes;
+      localStorage.setItem("notes", JSON.stringify(state.items));
     },
 
     filterNotes: (state, action) => {

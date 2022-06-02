@@ -66,7 +66,7 @@ function NewNote() {
               </figure>
             ))}
           </div>
-          <div>
+          <div className="btn">
             <Button type="outline" htmlType="submit" size="small">
               Add Note
             </Button>
